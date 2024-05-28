@@ -21,11 +21,10 @@ public class AnagramService {
             System.out.println("sortedKey=" + sortedKey);
             System.out.println("------------");
 
-            // Check if the key exists in the map
-            if (!anagramMap.containsKey(sortedKey)) {
-                // If not, create a new list and put it in the map
-                anagramMap.put(sortedKey, new ArrayList<>());
-            }
+            // Check if the key exists in the map.
+            // If not, create a new list and put it in the map
+            anagramMap.computeIfAbsent(sortedKey, k -> new ArrayList<>());
+
             // Add the word to the corresponding list in the map
             anagramMap.get(sortedKey).add(word);
         }
