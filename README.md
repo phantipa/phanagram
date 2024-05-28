@@ -3,15 +3,16 @@ PHANAGRAM
 ---
 Phanagram is a blend of the words Phantipa and anagram.
 
-Phanagram is a small program capable of finding all the words in a list that have one or more anagrams.
-
 An anagram is a word or phrase created by rearranging the letters of another word or phrase, using each original letter exactly once.(https://en.wikipedia.org/wiki/Anagram)
 
+Phanagram is a small program which groups words into anagram sets by sorting their characters and using the sorted representation as a key in a map.
+
 Note:
-* Not all words has an anagram.
-* We are only interested in single-word anagrams.
-* If the list contains the same word multiple times, it will only appear once in the anagram list.
-* This program supports StandardCharsets.UTF_8.
+
+    [1] Not all words has an anagram.
+    [2] We are only interested in single-word anagrams.
+    [3] If the list contains the same word multiple times, it will only appear once in the anagram list.
+    [4] This program supports StandardCharsets.UTF_8.
 
 Technologies
 -
@@ -47,9 +48,14 @@ Project Structure
                             ├── AnagramServiceTest.java
                             └── FileServiceTest.java'
 
+Running
+-
+    java .\src\main\java\com\phantipa\phanagram\Main.java
+
+
 Input
 -
-Input is a list of words, with one word per line.
+Input is a text file with words, with one word per line.
 
 Example:
 
@@ -60,11 +66,9 @@ Example:
     tal
     tall
 
-
-
 Output
 -
-Output is a list where each line displays all the anagrams in the same group.
+Output is a list in console where each line displays all the anagrams in the same group.
 
 Example:
 
