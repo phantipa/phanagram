@@ -9,6 +9,7 @@ public class AnagramService {
 
         for (String word : words) {
             // Sort the word to create a key
+            System.out.println("------------");
             System.out.println("word=" + word);
 
             char[] charArray = word.toCharArray();
@@ -19,7 +20,6 @@ public class AnagramService {
 
             String sortedKey = new String(charArray);
             System.out.println("sortedKey=" + sortedKey);
-            System.out.println("------------");
 
             // Check if the key exists in the map.
             // If not, create a new list and put it in the map
@@ -33,8 +33,10 @@ public class AnagramService {
     }
 
     public void printAnagramList(Map<String, List<String>> anagramMap) {
+        System.out.println("======Anagram output======");
+
         for (Map.Entry<String, List<String>> entry : anagramMap.entrySet()) {
-            // Print anagram that has one or several anagrams in the list.
+            // [1] Print anagram that has one or several anagrams in the list.
             if (entry.getValue().size() > 1) {
                 System.out.println(entry.getValue());
             }

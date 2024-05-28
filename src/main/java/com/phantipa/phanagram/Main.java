@@ -3,6 +3,7 @@ package com.phantipa.phanagram;
 import com.phantipa.phanagram.services.AnagramService;
 import com.phantipa.phanagram.services.FileService;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
@@ -10,7 +11,7 @@ public class Main {
 
     public static final String FILE_NAME = "src/main/resources/static/words-utf8.txt";
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         FileService fileService = new FileService();
         AnagramService anagramService = new AnagramService();
 

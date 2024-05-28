@@ -7,12 +7,16 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class FileService {
 
-    public String[] readFileToStringArray(String fileName) {
-//        List<String> wordList = new ArrayList<>();
-        Set<String> wordList = new HashSet<>();
+    private static final Logger LOGGER = Logger.getLogger(FileService.class.getName());
+
+    public String[] readFileToStringArray(String fileName) throws IOException {
+        // [3] Ensure that each element is unique and eliminates duplicates
+        Set<String> uniqueWords = new HashSet<>();
 
         try (BufferedReader br = new BufferedReader(
                 new InputStreamReader(new FileInputStream(fileName),
@@ -21,14 +25,17 @@ public class FileService {
             while ((line = br.readLine()) != null) {
                 // Check if the line is not empty before adding to the list
                 if (!line.trim().isEmpty()) {
-                    wordList.add(line.trim());
+                    uniqueWords.add(line.trim());
                 }
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            if (LOGGER.isLoggable(Level.SEVERE)) {
+                LOGGER.log(Level.SEVERE, "Error reading file: " + fileName, e);
+            }
+            throw e;
         }
 
         // Convert List to Array
-        return wordList.toArray(new String[0]);
+        return uniqueWords.toArray(new String[0]);
     }
 }
