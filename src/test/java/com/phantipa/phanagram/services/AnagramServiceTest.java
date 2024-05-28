@@ -1,6 +1,5 @@
 package com.phantipa.phanagram.services;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,7 +10,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class AnagramServiceTest {
 
@@ -32,10 +32,6 @@ public class AnagramServiceTest {
         System.setOut(new PrintStream(outContent));
     }
 
-    @After
-    public void tearDown() throws Exception {
-    }
-
     @Test
     public void findAnagrams() {
         Map<String, List<String>> anagramMap = anagramService.findAnagrams(WORDS);
@@ -47,7 +43,6 @@ public class AnagramServiceTest {
         List<String> list1 = anagramMap.get("lø");
         List<String> list2 = anagramMap.get("alt");
         List<String> list3 = anagramMap.get("allt");
-
 
         assertEquals(Arrays.asList("øl", "lø"), list1);
         assertEquals(Arrays.asList("alt", "tal", "tal"), list2);
