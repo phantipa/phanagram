@@ -7,12 +7,19 @@ An anagram is a word or phrase created by rearranging the letters of another wor
 
 Phanagram is a small program which groups words into anagram sets by sorting their characters and using the sorted representation as a key in a map.
 
-Note:
+Content
+-------
+[Technologies](https://github.com/phantipa/phanagram/tree/master?tab=readme-ov-file#technologies)
 
-    [1] Not all words has an anagram.
-    [2] We are only interested in single-word anagrams.
-    [3] If the list contains the same word multiple times, it will only appear once in the anagram list.
-    [4] This program supports StandardCharsets.UTF_8.
+[Project Structure](https://github.com/phantipa/phanagram/tree/master?tab=readme-ov-file#project-structure)
+
+[Note](https://github.com/phantipa/phanagram/tree/master?tab=readme-ov-file#note)
+
+[Running](https://github.com/phantipa/phanagram/tree/master?tab=readme-ov-file#running)
+
+[Input](https://github.com/phantipa/phanagram/tree/master?tab=readme-ov-file#input)
+
+[Output](https://github.com/phantipa/phanagram/tree/master?tab=readme-ov-file#output)
 
 Technologies
 -
@@ -47,6 +54,14 @@ Project Structure
                         └── service
                             ├── AnagramServiceTest.java
                             └── FileServiceTest.java'
+
+Note
+-
+
+    [1] Not all words has an anagram.
+    [2] We are only interested in single-word anagrams.
+    [3] If the list contains the same word multiple times, it will only appear once in the anagram list.
+    [4] This program supports StandardCharsets.UTF_8.
 
 Running
 -
