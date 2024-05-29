@@ -19,6 +19,8 @@ Content
 
 [Input](https://github.com/phantipa/phanagram/tree/master?tab=readme-ov-file#input)
 
+[AnagramMap](https://github.com/phantipa/phanagram/tree/master?tab=readme-ov-file#anagramMap)
+
 [Output](https://github.com/phantipa/phanagram/tree/master?tab=readme-ov-file#output)
 
 Technologies
@@ -80,6 +82,15 @@ Example:
     tal
     tal
     tall
+
+AnagramMap
+-
+
+    {
+    "lø": ["øl", "lø"],
+    "alt": ["alt", "tal", "tal"],
+    "allt": ["tall"]
+    }
 
 Output
 -
