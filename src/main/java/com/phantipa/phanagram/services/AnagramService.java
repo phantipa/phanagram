@@ -33,8 +33,6 @@ public class AnagramService {
     }
 
     public void printAnagramList(Map<String, List<String>> anagramMap) {
-        System.out.println("======Anagram output======");
-
         for (Map.Entry<String, List<String>> entry : anagramMap.entrySet()) {
             // [1] Print anagram that has one or several anagrams in the list.
             if (entry.getValue().size() > 1) {
