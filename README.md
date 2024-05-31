@@ -1,6 +1,10 @@
 PHANAGRAM
 -
----
+     _                      __  _           
+    |_) |_|  /\  |\ |  /\  /__ |_)  /\  |\/|
+    |   | | /--\ | \| /--\ \_| | \ /--\ |  |
+
+
 Phanagram is a blend of the words Phantipa and anagram.
 
 An anagram is a word or phrase created by rearranging the letters of another word or phrase, using each original letter exactly once.(https://en.wikipedia.org/wiki/Anagram)
