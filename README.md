@@ -7,6 +7,8 @@ An anagram is a word or phrase created by rearranging the letters of another wor
 
 Phanagram is a small program which groups words into anagram sets by sorting their characters and using the sorted representation as a key in a map.
 
+![AnagramMap](https://github.com/phantipa/phanagram/assets/4380010/7b56beec-520d-411a-8c80-7aacea8d23b5)
+
 Content
 -------
 [Technologies](https://github.com/phantipa/phanagram/tree/master?tab=readme-ov-file#technologies)
@@ -84,7 +86,6 @@ Example:
     tall
 
 AnagramMap
--
 
     {
     "lø": ["øl", "lø"],
